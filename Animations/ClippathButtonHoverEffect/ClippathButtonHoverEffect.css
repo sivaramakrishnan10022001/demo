@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.clip-pathbutton-wapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clip-pathbutton-wapper>a {
+    position: relative;
+    display: inline-block;
+}
+
+.clip-pathbutton-wapper>a>span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clip-pathbutton-wapper>a>span:nth-child(2) {
+    clip-path: polygon(60% 0, 100% 0%, 100% 100%, 60% 100%, 40% 53%);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.clip-pathbutton-wapper>a>span:nth-child(2):hover {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0 50%);
+}
+
+.clip-pathbutton-wapper>a>span:nth-child(1):hover~span:nth-child(2) {
+    clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%, 100% 50%);
+}
+
+/* ================================================================= */
+/* ========================== sample css =========================== */
+/* ================================================================= */
+
+.clip-pathbutton-wapper.sample {
+    width: 100%;
+    min-height: 100vh;
+    background: #43345d;
+}
+
+.clip-pathbutton-wapper.sample>a {
+    width: 160px;
+    height: 50px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+.clip-pathbutton-wapper.sample>a>span {
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    background: #6c4ba5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.clip-pathbutton-wapper.sample>a>span:nth-child(2) {
+    color: #6c4ba5;
+    background: #ffffff;
+}

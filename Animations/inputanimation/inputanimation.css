@@ -1,0 +1,96 @@
+.inputanimation-wapper {
+    background-color: #aa96da;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.inputanimation-wapper>.inputanimation-container {
+    background-color: #393e467d;
+    padding: 20px 40px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.inputanimation-wapper>.inputanimation-container>h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.inputanimation-wapper>.inputanimation-container>.form>.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.inputanimation-wapper>.inputanimation-container>.form>.form-control>input {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #ffffff;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.inputanimation-wapper>.inputanimation-container>.form>.form-control>input:focus,
+.inputanimation-wapper>.inputanimation-container>.form>.form-control>input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.inputanimation-wapper>.inputanimation-container>.form>.form-control>label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.inputanimation-wapper>.inputanimation-container>.form>.form-control>label>span {
+    display: inline-block;
+    min-width: 5px;
+    font-size: 18px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.inputanimation-wapper>.inputanimation-container>.form>.form-control>input:focus+label>span,
+.inputanimation-wapper>.inputanimation-container>.form>.form-control>input:valid+label>span {
+    color: lightblue;
+    transform: translateY(-30px);
+}
+
+
+.inputanimation-wapper>.inputanimation-container>.form>.submit-btn {
+    width: 100%;
+    background: lightblue;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.inputanimation-wapper>.inputanimation-container>.form>.submit-btn:active {
+    transform: scale(0.98);
+}
+
+.inputanimation-wapper>.inputanimation-container>.form>.text {
+    margin-top: 30px;
+}
+
+.inputanimation-wapper>.inputanimation-container>.form>.text>a {
+    text-decoration: none;
+    color: lightblue;
+}

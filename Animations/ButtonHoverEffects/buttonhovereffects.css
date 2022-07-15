@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.button-wapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-wapper>.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button-wapper>.button-container>a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #00000022);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.button-wapper>.button-container>a:hover {
+    /* transition-delay: 1.5s; */
+    transition-delay: 1s;
+}
+
+.button-wapper>.button-container>a>span {
+    position: relative;
+    z-index: 100;
+}
+
+.button-wapper>.button-container>a::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.button-wapper>.button-container>a:hover::before {
+    left: -2px;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+.button-wapper>.button-container>a::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.button-wapper>.button-container>a:hover::after {
+    right: -2px;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+/* sample css */
+
+.button-wapper.sample {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bodybg);
+}
+
+.button-wapper.sample>.button-container>a {
+    padding: 15px 30px;
+    border: 2px solid var(--bgcolor);
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.button-wapper.sample>.button-container>a:nth-child(2) {
+    filter: var(--hueRotate);
+}
+
+.button-wapper.sample>.button-container>a:hover {
+    color: var(--hcolor);
+    box-shadow:
+        0 0 10px var(--bgcolor),
+        0 0 20px var(--bgcolor),
+        0 0 40px var(--bgcolor),
+        0 0 80px var(--bgcolor),
+        0 0 160px var(--bgcolor);
+}
+
+.button-wapper.sample>.button-container>a::before {
+    width: 20px;
+    height: 2px;
+    background: var(--bgcolor);
+    box-shadow: 5px -8px 0 var(--bgcolor), 5px 8px 0 var(--bgcolor);
+}
+
+.button-wapper.sample>.button-container>a:hover::before {
+    width: 60%;
+    height: 100%;
+    box-shadow: 5px 0 0 var(--bgcolor), 5px 0 0 var(--bgcolor);
+}
+
+.button-wapper.sample>.button-container>a::after {
+    width: 20px;
+    height: 2px;
+    background: var(--bgcolor);
+    box-shadow: -5px -8px 0 var(--bgcolor), -5px 8px 0 var(--bgcolor);
+}
+
+.button-wapper.sample>.button-container>a:hover::after {
+    width: 60%;
+    height: 100%;
+    box-shadow: -5px 0 0 var(--bgcolor), -5px 0 0 var(--bgcolor);
+}
+
+/* button two */
+
+.button-wapper.sample>.button-container>a:nth-child(2):hover {
+    color: var(--hcolor);
+    box-shadow:
+        0 0 10px var(--bgcolor),
+        0 0 20px var(--bgcolor),
+        0 0 40px var(--bgcolor),
+        0 0 80px var(--bgcolor),
+        0 0 160px var(--bgcolor);
+}
+
+.button-wapper.sample>.button-container>a:nth-child(2)::before {
+    width: 20px;
+    height: 2px;
+    background: var(--bgcolor);
+    box-shadow: 5px -8px 0 var(--bgcolor), 5px 8px 0 var(--bgcolor);
+}
+
+.button-wapper.sample>.button-container>a:nth-child(2):hover::before {
+    width: 60%;
+    height: 100%;
+    box-shadow: 5px 0 0 var(--bgcolor), 5px 0 0 var(--bgcolor);
+}
+
+.button-wapper.sample>.button-container>a:nth-child(2)::after {
+    width: 20px;
+    height: 2px;
+    background: var(--bgcolor);
+    box-shadow: -5px -8px 0 var(--bgcolor), -5px 8px 0 var(--bgcolor);
+}
+
+.button-wapper.sample>.button-container>a:nth-child(2):hover::after {
+    width: 60%;
+    height: 100%;
+    box-shadow: -5px 0 0 var(--bgcolor), -5px 0 0 var(--bgcolor);
+}

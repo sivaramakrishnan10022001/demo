@@ -1,0 +1,223 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.glassmorphism-effect-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.glassmorphism-effect-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    clip-path: circle(65% at 100% -20%);
+}
+
+.glassmorphism-effect-section::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    clip-path: circle(35% at 0% -20%);
+}
+
+.glassmorphism-effect-section>.glassmorphism-effect-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 11;
+}
+
+.glassmorphism-effect-section>.glassmorphism-effect-container>.glassmorphism-effect-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.glassmorphism-effect-section>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-img-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+}
+
+.glassmorphism-effect-section>.glassmorphism-effect-container>.glassmorphism-effect-card:hover>.glassmorphism-effect-img-box {
+    transform: translateY(-100px);
+}
+
+.glassmorphism-effect-section>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-img-box>.img {
+    transition: all 0.5s ease-in-out;
+}
+
+.glassmorphism-effect-section>.glassmorphism-effect-container>.glassmorphism-effect-card:hover>.glassmorphism-effect-img-box>.img {
+    transform: translate(-20px, -40px) rotate(-25deg) scale(1.4);
+}
+
+.glassmorphism-effect-section>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.glassmorphism-effect-section>.glassmorphism-effect-container>.glassmorphism-effect-card:hover>.glassmorphism-effect-content {
+    opacity: 1;
+    visibility: visible;
+    /* transform: translateY(-50px); */
+    transform: translateY(-10px);
+}
+
+.glassmorphism-effect-section>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>.size,
+.glassmorphism-effect-section>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>.color {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glassmorphism-effect-section>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>.size>span {
+    display: inline-block;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.glassmorphism-effect-section>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>.color>span {
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.glassmorphism-effect-section>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>a {
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+/* ================================================================= */
+/* ========================== sample css =========================== */
+/* ================================================================= */
+
+.glassmorphism-effect-section.sample {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 20px;
+    background-color: #232323;
+}
+
+.glassmorphism-effect-section.sample::before {
+    width: 100%;
+    height: 100%;
+    background-color: #ef3b36;
+}
+
+.glassmorphism-effect-section.sample::after {
+    width: 100%;
+    height: 100%;
+    background-color: #47aafa;
+}
+
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card {
+    width: 300px;
+    height: 400px;
+    margin: 20px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-img-box {
+    padding: 20px;
+}
+
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-img-box>h2 {
+    color: #ffffff;
+    font-weight: 600;
+    padding-bottom: 50px;
+}
+
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-img-box>.img {
+    max-width: 100%;
+    margin: 0 0 20px;
+}
+
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>.size>h3,
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>.color>h3 {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>.size,
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>.color {
+    padding: 8px 20px;
+}
+
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>.color>span:nth-child(2) {
+    background-color: #9bdc28;
+}
+
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>.color>span:nth-child(3) {
+    background-color: #03a9f4;
+}
+
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>.color>span:nth-child(4) {
+    background-color: #e91e63;
+}
+
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>.size>span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 24px;
+    color: #111111;
+    background: #ffffff;
+    border-radius: 4px;
+    margin: 0px 5px;
+    font-size: 14px;
+}
+
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>.size>span:hover {
+    background-color: #9bdc28;
+}
+
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>.color>span {
+    width: 20px;
+    height: 20px;
+    background-color: #f00;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 2px solid #ffffff;
+}
+
+.glassmorphism-effect-section.sample>.glassmorphism-effect-container>.glassmorphism-effect-card>.glassmorphism-effect-content>a {
+    padding: 12px 30px;
+    background-color: #ffffff;
+    border-radius: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #111111;
+    text-transform: uppercase;
+}
+

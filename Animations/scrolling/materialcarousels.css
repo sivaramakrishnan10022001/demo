@@ -1,0 +1,308 @@
+
+.mf-carousel1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mf-carousel1>.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+
+    transition: all 0.2s;
+    transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mf-carousel1 .card {
+    min-width: 200px;
+    height: 100%;
+    border: 1px solid #000;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.mf-carousel1>.prev {
+    cursor: pointer;
+}
+
+.mf-carousel1>.prev>svg {
+    width: 14px;
+    height: 14px;
+    transform: rotate(180deg);
+}
+
+.mf-carousel1>.next {
+    cursor: pointer;
+}
+
+.mf-carousel1>.next>svg {
+    width: 14px;
+    height: 14px;
+}
+
+.mf-carousel1>.pagination-container {
+    position: absolute;
+    bottom: 0px;
+    left: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mf-carousel1>.pagination-container .circle {
+    width: 24px;
+    height: 4px;
+    margin: 4px;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.mf-carousel1>.pagination-container .circle.active {
+    width: 24px;
+    height: 4px;
+    margin: 4px;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.mf-carousel1.sample {
+    width: 930px;
+    margin-bottom: 20px;
+    padding: 10px 20px 30px;
+}
+
+.mf-carousel1.sample>.cards>.card {
+    width: 280px;
+    height: 320px;
+    border: none;
+    margin: 8px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mf-carousel1.sample>.prev {
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+}
+
+.mf-carousel1.sample>.prev:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mf-carousel1.sample>.next {
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    z-index: 1;
+}
+
+.mf-carousel1.sample>.next:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* ============================================= */
+/* carousel option 1 */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+
+.m-carousel {
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.m-carousel>.slides-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #ccc;
+    fill: #ccc;
+    overflow: hidden;
+}
+
+.m-carousel>.slides-container>.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.m-carousel>.slides-container>.slide>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+.m-carousel>.slides-container>.prev {
+    position: absolute;
+    left: 10px;
+    top: 45%;
+    transform: rotate(180deg);
+    fill: inherit;
+    z-index: 2;
+    cursor: pointer;
+    user-select: none;
+}
+
+.m-carousel>.slides-container>.next {
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    color: inherit;
+    z-index: 2;
+    cursor: pointer;
+    user-select: none;
+}
+
+.m-carousel>.slides-container>.next>svg,
+.m-carousel>.slides-container>.prev>svg {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.m-carousel>.slides-container>.next>svg:hover,
+.m-carousel>.slides-container>.prev>svg:hover {
+    fill: #fff;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.m-carousel>.slides-container>.pagination-container {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+.m-carousel>.slides-container>.pagination-container>.circle {
+    width: 10px;
+    height: 10px;
+    color: transparent;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.m-carousel>.slides-container>.pagination-container>.circle:hover,
+.m-carousel>.slides-container>.pagination-container>.active {
+    background-color: #fff;
+}
+
+/* =================================================== */
+/* carousel option 2 */
+
+.m-carousel>.slides-container2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.m-carousel>.slides-container2>.slides {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    transition: all 0.3s;
+}
+
+.m-carousel>.slides-container2>.slides>.slide {
+    margin: 1%;
+    min-width: 70%;
+    max-width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.m-carousel>.circles {
+    position: absolute;
+    bottom: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-carousel>.circles>.circle {
+    width: 20px;
+    height: 3px;
+    margin: 0px 2px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.m-carousel>.circles>.circle:hover {
+    background-color: black;
+}
+
+.m-carousel>.circles>.active {
+    background-color: black;
+    width: 20px;
+}
+
+.m-carousel>.slides-container2>.prev {
+    position: absolute;
+    left: 10px;
+    top: 45%;
+    transform: rotate(180deg);
+    fill: inherit;
+    z-index: 2;
+    cursor: pointer;
+    user-select: none;
+}
+
+.m-carousel>.slides-container2>.next {
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    color: inherit;
+    z-index: 2;
+    cursor: pointer;
+    user-select: none;
+}
+
+.m-carousel>.slides-container2>.next>svg,
+.m-carousel>.slides-container2>.prev>svg {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.m-carousel>.slides-container2>.next>svg:hover,
+.m-carousel>.slides-container2>.prev>svg:hover {
+    fill: #fff;
+    background-color: rgba(0, 0, 0, 0.25);
+}

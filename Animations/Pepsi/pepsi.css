@@ -1,0 +1,162 @@
+.pepsi-wapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pepsi-wapper>.pepsi-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s linear;
+}
+
+.pepsi-wapper>.pepsi-card>.pepsi-cricle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.pepsi-wapper>.pepsi-card>.pepsi-cricle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s linear;
+}
+
+.pepsi-wapper>.pepsi-card>img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 300px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s linear;
+}
+
+.pepsi-wapper.sample>.pepsi-card:hover>img {
+    left: 72%;
+}
+
+.pepsi-wapper>.pepsi-card>.content {
+    left: 20%;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s linear;
+}
+
+.pepsi-wapper>.pepsi-card:hover>.content {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.pepsi-wapper>.pepsi-card>.content>p {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pepsi-wapper>.pepsi-card>.content>a {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+/* sample css */
+
+.pepsi-wapper.sample {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.pepsi-wapper.sample>.pepsi-card {
+    width: 600px;
+    height: 350px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.pepsi-wapper.sample>.pepsi-card>.pepsi-cricle::before {
+    background-color: #d83133;
+    clip-path: circle(120px at center);
+}
+
+.pepsi-wapper.sample>.pepsi-card:hover>.pepsi-cricle::before {
+    background: #0065c3;
+    clip-path: circle(400px at center);
+}
+
+.pepsi-wapper.sample>.pepsi-card:hover>img {
+    height: 500px;
+}
+
+.pepsi-wapper.sample>.pepsi-card>.content {
+    width: 50%;
+    padding: 20px 20px 20px 40px;
+}
+
+.pepsi-wapper.sample>.pepsi-card>.content>h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 5px;
+}
+
+.pepsi-wapper.sample>.pepsi-card>.content>p {
+    color: #fff;
+}
+
+.pepsi-wapper.sample>.pepsi-card>.content>a {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    color: #111;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    .pepsi-wapper.sample>.pepsi-card {
+        width: auto;
+        max-width: 350px;
+        align-items: flex-start;
+        margin: 10px;
+    }
+
+    .pepsi-wapper.sample>.pepsi-card:hover {
+        height: 600px;
+    }
+
+    .pepsi-wapper.sample>.pepsi-card>.content {
+        width: 100%;
+        left: 0;
+        padding: 30px;
+    }
+
+    .pepsi-wapper.sample>.pepsi-card:hover>img {
+        top: 70%;
+        left: 50%;
+        height: 300px;
+    }
+}
+
+ 
+
+@media (max-width: 420px) {
+    .pepsi-wapper.sample>.pepsi-card>.content {
+        padding: 20px;
+    }
+}

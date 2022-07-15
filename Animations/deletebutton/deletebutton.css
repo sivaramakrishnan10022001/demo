@@ -1,0 +1,93 @@
+.deletebutton-wapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #222222;
+}
+
+.deletebutton-wapper>.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 160px;
+    height: 50px;
+    background: #333333;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.deletebutton-wapper>.btn.active {
+    background: #2196f3;
+}
+
+.deletebutton-wapper>.btn>.btn-icon {
+    position: absolute;
+    left: 40px;
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+    background: #ffffff;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    transition: 0.5s;
+}
+
+.deletebutton-wapper>.btn:hover>.btn-icon {
+    transform: scale(1.5) rotate(60deg) translateY(10px);
+}
+
+/* .deletebutton-wapper>.btn:hover>.btn-icon {
+    transform: scale(1.5) rotate(60deg) translateY(10px);
+} */
+
+.deletebutton-wapper>.btn.active>.btn-icon {
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+    border-radius: 0;
+    width: 20px;
+    height: 10px;
+    background: transparent;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.deletebutton-wapper>.btn>.btn-icon::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    box-shadow: 12px -2px 0 #333333,
+        12px -2px 0 #333333,
+        15px -1px 0 #333333,
+        6px -2px 0 #ffffff;
+    transition: 0.5s;
+}
+
+.deletebutton-wapper>.btn.active:hover>.btn-icon::before,
+.deletebutton-wapper>.btn.active>.btn-icon::before {
+    transform: scale(0);
+}
+
+.deletebutton-wapper>.btn:hover>.btn-icon::before {
+    transform: rotate(-90deg) translateX(50%) translateY(-10px);
+}
+
+.deletebutton-wapper>.btn>.text {
+    position: absolute;
+    right: 40px;
+    color: #ffffff;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+.deletebutton-wapper>.btn:hover>.text,
+.deletebutton-wapper>.btn.active>.text {
+    transform: translateX(-50px) translateY(-5px) scale(0);
+}

@@ -1,0 +1,150 @@
+.media-wapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.media-wapper>.section {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-wapper>.section::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.media-wapper>.section>.color {
+    position: absolute;
+    filter: blur(150px);
+}
+
+.media-wapper>.section>.color:nth-child(1) {
+    top: -360px;
+}
+
+.media-wapper>.section>.color:nth-child(2) {
+    bottom: -150px;
+    left: 100px;
+}
+
+.media-wapper>.section>.color:nth-child(3) {
+    bottom: 50px;
+    right: 0px;
+}
+
+.media-wapper>.media-icons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.media-wapper>.media-icons>.icon {
+    position: relative;
+    margin: 10px;
+}
+
+.media-wapper>.media-icons>.icon>.icon-a {
+    position: relative;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.media-wapper>.media-icons>.icon>.icon-a:hover {
+    transform: translateY(-20px);
+}
+
+.media-wapper>.media-icons>.icon>.icon-a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewX(45deg) translateX(150px);
+    transition: 0.5s;
+}
+
+.media-wapper>.media-icons>.icon>.icon-a:hover::before {
+    transform: skewX(45deg) translateX(-150px);
+}
+
+
+
+/* ================================================================= */
+/* ========================== sample css =========================== */
+/* ================================================================= */
+
+.media-wapper.sample {
+    width: 100%;
+    height: 100vh;
+}
+
+.media-wapper.sample>.section {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff4f8b, #dff1ff);
+}
+
+.media-wapper.sample>.section::before {
+    width: 100%;
+    height: 50%;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.media-wapper.sample>.section>.color:nth-child(1) {
+    background: #ff359b;
+    width: 600px;
+    height: 600px;
+}
+
+.media-wapper.sample>.section>.color:nth-child(2) {
+    background: #00d2ff;
+    width: 500px;
+    height: 500px;
+}
+
+.media-wapper.sample>.section>.color:nth-child(3) {
+    background: #fffd87;
+    width: 300px;
+    height: 300px;
+}
+
+.media-wapper.sample>.media-icons {
+    width: 100%;
+    height: 100%;
+}
+
+.media-wapper.sample>.media-icons>.icon>.icon-a {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+}
+
+.media-wapper.sample>.media-icons>.icon>.icon-a::before {
+    width: 50px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.media-wapper.sample>.media-icons>.icon>.icon-a>.icon-svg {
+    fill: #ffffff;
+    height: 20px;
+    width: 20px;
+}

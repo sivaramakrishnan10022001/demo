@@ -1,0 +1,80 @@
+.smoke-wapper {
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ECEFFC;
+}
+
+.smoke-wapper>.smoke-button {
+    margin: 0 12px;
+    --background: #2F3545;
+    --text: #fff;
+    --font-size: 16px;
+    --duration: 0.5s;
+    --move-hover: -4px;
+    --shadow: 0 2px 8px -1px rgba(21, 25, 36, 0.32);
+    --shadow-hover: 0 4px 20px -2px rgba(21, 25, 36, 0.5);
+    padding: 16px 32px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    line-height: var(--font-size);
+    border-radius: 24px;
+    display: block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: var(--font-size);
+    letter-spacing: 0.5px;
+    background: var(--background);
+    color: var(--text);
+    box-shadow: var(--shadow);
+    transform: translateY(var(--y));
+    transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+}
+
+.smoke-wapper>.smoke-button>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.smoke-wapper>.smoke-button>div>span {
+    display: block;
+    backface-visibility: hidden;
+}
+
+
+.smoke-wapper>.smoke-button:hover>div>span {
+    animation: smoke 1s linear var(--d-smoke);
+}
+
+@keyframes smoke {
+    45%,
+    55% {
+        filter: blur(4px);
+    }
+
+    50%,
+    50.1% {
+        opacity: 0;
+    }
+
+    25%,
+    75% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(12px) translateY(-8px);
+    }
+
+    50.1% {
+        transform: translateX(calc(12px * -1));
+    }
+}

@@ -1,0 +1,196 @@
+.clock-wapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.clock-wapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.clock-wapper::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    animation: clock-wapper-after 5s ease-in-out infinite;
+}
+
+@keyframes clock-wapper-after {
+
+    /* 0%,
+    100% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    } */
+}
+
+.clock-wapper>.clock-container {
+    position: relative;
+}
+
+/* .clock-wapper>.clock-container::before {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+} */
+
+.clock-wapper>.clock-container>.box {
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(25px);
+    animation: clock-wapper-after 5s ease-in-out infinite;
+    animation-delay: -2.5s;
+}
+
+.clock-wapper>.clock-container>.box>.clock {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: none;
+    border-right: none;
+    background: radial-gradient(transparent, rgba(255, 255, 255, 0.2)), url(./clock.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(25px);
+    box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.1),
+        10px 10px 20px rgba(0, 0, 0, 0.1),
+        0px 40px 50px rgba(0, 0, 0, 0.2);
+}
+
+.clock-wapper>.clock-container>.box>.clock::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock-wapper>.clock-container>.box>.clock>.hour,
+.min,
+.sec {
+    position: absolute;
+}
+
+.clock-wapper>.clock-container>.box>.clock>.hour>.hr {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.clock-wapper>.clock-container>.box>.clock>.hour>.hr::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #ff105e;
+    z-index: 11;
+    border-radius: 6px;
+}
+
+.clock-wapper>.clock-container>.box>.clock>.min>.mn {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.clock-wapper>.clock-container>.box>.clock>.min>.mn::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #ffffff;
+    z-index: 12;
+    border-radius: 6px;
+}
+
+.clock-wapper>.clock-container>.box>.clock>.sec>.sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.clock-wapper>.clock-container>.box>.clock>.sec>.sc::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #ffffff;
+    z-index: 12;
+    border-radius: 6px;
+}
+
+/* ================================================================= */
+/* ========================== sample css =========================== */
+/* ================================================================= */
+
+.clock-wapper.sample {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.clock-wapper.sample::before {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #e91e63, #e91e63 50%, #ffc107 50%, #ffc107);
+}
+
+.clock-wapper.sample::after {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(160deg, #03a9f4, #03a9f4 50%, transparent 50%, transparent);
+}
+
+/* .clock-wapper.sample>.clock-container::before {
+    width: 100%;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), transparent, transparent);
+} */
+
+.clock-wapper.sample>.clock-container>.box {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.clock-wapper.sample>.clock-container>.box>.clock::before {
+    background: #ffffff;
+    height: 15px;
+    width: 15px;
+}
+
+.clock-wapper.sample>.clock-container>.box>.clock>.hour,
+.hr {
+    width: 160px;
+    height: 160px;
+}
+
+/* .clock-wapper.sample>.clock-container>.box>.clock>.min,
+mn {
+    height: 190px;
+    width: 190px;
+} */
+
+.clock-wapper.sample>.clock-container>.box>.clock>.sec,
+.sc {
+    height: 230px;
+    width: 230px;
+}

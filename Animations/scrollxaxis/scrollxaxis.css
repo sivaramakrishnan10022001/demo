@@ -1,0 +1,58 @@
+
+.scrollxaxis-wapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+/* scrollxaxis-container and cards */
+.scrollxaxis-container {
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    overflow: hidden;
+    cursor: grab;
+    border-radius: 1rem;
+    transform: var(--translate3d);
+    /* border-top: 10px solid #f00; */
+}
+
+.scrollxaxis-cards {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 300px);
+    grid-gap: 50px;
+    border-radius: 1rem;
+    pointer-events: none;
+    /* border-bottom: 10px solid #00f; */
+}
+
+.card {
+    /* border: 1px solid #ccc; */
+    border-radius: 1rem;
+    overflow: hidden;
+    /* box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1); */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* global */
+.card img {
+    width: 100%;
+}
+
+
+
+.card-content {
+    color: #4e4e4e;
+    padding: 1rem;
+}
+
+.card-content h2 {
+    margin: 0.5rem 0;
+}
