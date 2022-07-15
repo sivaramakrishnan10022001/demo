@@ -1,0 +1,381 @@
+.TreeviewAndeyecopy-wapper {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    user-select: none;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container {
+    width: 700px;
+    min-height: 500px;
+    text-transform: capitalize;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-main {
+    width: 100%;
+    line-height: 25px;
+    padding: 0px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-main>.main-icon {
+    width: 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-main>.main-icon>.main-svg {
+    height: 14px;
+    width: 14px;
+    fill: black;
+    cursor: pointer;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-main>.eye-icon {
+    height: 100%;
+    width: auto;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-main>.eye-icon>.eye-svg {
+    height: 14px;
+    width: 14px;
+    fill: black;
+    cursor: pointer;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-main>.main-name {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    width: 100%;
+    text-align: start;
+    font-size: 16px;
+    padding-left: 8px;
+    /* letter-spacing: 1px; */
+    font-weight: 400;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container {
+    width: 100%;
+    height: 100%;
+    -webkit-transition: transform .6s cubic-bezier(.35, 0, .25, 1);
+    transition: transform .6s cubic-bezier(.35, 0, .25, 1);
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container.open {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container.close {
+    opacity: 0;
+    transform: translate3d(20px, 0px, 0px);
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical {
+    width: 100%;
+    min-height: 0px;
+    height: auto;
+    transition-duration: 300ms;
+}
+
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical.close {
+    /* transition: height .10s cubic-bezier(.35, 0, .25, 1); */
+    opacity: 0;
+    transition-duration: 300ms;
+    transform: translate3d(80px, 0px, 0px);
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical.open {
+    opacity: 1;
+    /* height: 100%; */
+    transform: translate3d(0px, 0px, 0px);
+    /* -webkit-transition: transform .6s cubic-bezier(.35, 0, .25, 1);
+    transition: transform .6s cubic-bezier(.35, 0, .25, 1); */
+    min-height: 0px;
+    height: auto;
+    transition-duration: 300ms;
+}
+
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    padding-left: 18px;
+    border-left: 1px dashed gray;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    line-height: 25px;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-li-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-li-content>.eye-icon {
+    height: 100%;
+    width: auto;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-li-content>.eye-icon>.eye-svg {
+    height: 14px;
+    width: 14px;
+    fill: black;
+    cursor: pointer;
+}
+
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-li-content>.TreeviewAndeye-li-icon {
+    height: 100%;
+    width: auto;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-li-content>.TreeviewAndeye-li-icon>.li-icon-svg {
+    height: 14px;
+    width: 14px;
+    fill: black;
+    cursor: pointer;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-li-content>.TreeviewAndeye-li-name {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    width: 100%;
+    text-align: start;
+    font-size: 15px;
+    padding: 0 8px;
+    /* letter-spacing: 1px; */
+    font-weight: 400;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 7px;
+    height: 0px;
+    opacity: 0;
+    transform: translate3d(50px, 0px, 0px);
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree.close {
+    height: 0px;
+    transition: height .10s cubic-bezier(.35, 0, .25, 1);
+    opacity: 0;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree.open {
+    opacity: 1;
+    height: 100%;
+    transform: translate3d(0px, 0px, 0px);
+    -webkit-transition: transform .6s cubic-bezier(.35, 0, .25, 1);
+    transition: transform .6s cubic-bezier(.35, 0, .25, 1);
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul {
+    width: 100%;
+    height: 100%;
+    border-left: 1px dashed gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-Subtree-li-content {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    padding-left: 19px;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-Subtree-li-content>.Subtree-li-content-icon {
+    height: 100%;
+    width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-Subtree-li-content>.Subtree-li-content-icon>.Subtree-icon-svg {
+    height: 14px;
+    width: 14px;
+    fill: black;
+    cursor: pointer;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-Subtree-li-content>.eye-icon {
+    height: 100%;
+    width: auto;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-Subtree-li-content>.eye-icon>.eye-svg {
+    height: 14px;
+    width: 14px;
+    fill: black;
+    cursor: pointer;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-Subtree-li-content>.Subtree-li-name {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    width: 100%;
+    text-align: start;
+    font-size: 14px;
+    padding: 0 8px;
+    /* letter-spacing: 1px; */
+    font-weight: 400;
+}
+
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-children-child {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 25px;
+    height: 0px;
+    opacity: 0;
+    transform: translate3d(50px, 0px, 0px);
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-children-child.close {
+    height: 0px;
+    transition: height .10s cubic-bezier(.35, 0, .25, 1);
+    opacity: 0;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-children-child.open {
+    opacity: 1;
+    height: 100%;
+    transform: translate3d(0px, 0px, 0px);
+    -webkit-transition: transform .6s cubic-bezier(.35, 0, .25, 1);
+    transition: transform .6s cubic-bezier(.35, 0, .25, 1);
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-children-child>.TreeviewAndeye-children-child-ul {
+    width: 100%;
+    height: 100%;
+    border-left: 1px dashed gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 25px;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-children-child>.TreeviewAndeye-children-child-ul>.TreeviewAndeye-children-child-li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-children-child>.TreeviewAndeye-children-child-ul>.TreeviewAndeye-children-child-li>.TreeviewAndeye-children-child-li-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-children-child>.TreeviewAndeye-children-child-ul>.TreeviewAndeye-children-child-li>.TreeviewAndeye-children-child-li-content>.children-child-li-content-icon {
+    height: 100%;
+    width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-children-child>.TreeviewAndeye-children-child-ul>.TreeviewAndeye-children-child-li>.TreeviewAndeye-children-child-li-content>.children-child-li-content-icon>.children-child-li-content-icon-svg {
+    height: 14px;
+    width: 14px;
+    fill: black;
+    cursor: pointer;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-children-child>.TreeviewAndeye-children-child-ul>.TreeviewAndeye-children-child-li>.TreeviewAndeye-children-child-li-content>.eye-icon {
+    height: 100%;
+    width: auto;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-children-child>.TreeviewAndeye-children-child-ul>.TreeviewAndeye-children-child-li>.TreeviewAndeye-children-child-li-content>.eye-icon>.eye-svg {
+    height: 14px;
+    width: 14px;
+    fill: black;
+    cursor: pointer;
+}
+
+.TreeviewAndeyecopy-wapper>.TreeviewAndeyecopy-container>.TreeviewAndeye-navbar>.TreeviewAndeye-vertical-container>.TreeviewAndeye-vertical>.TreeviewAndeye-ul>.TreeviewAndeye-li>.TreeviewAndeye-Subtree>.TreeviewAndeye-Subtree-ul>.TreeviewAndeye-Subtree-li>.TreeviewAndeye-children-child>.TreeviewAndeye-children-child-ul>.TreeviewAndeye-children-child-li>.TreeviewAndeye-children-child-li-content>.children-child-li-content-name {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    padding-left: 8px;
+}

@@ -1,0 +1,106 @@
+
+
+.filter-container > .menu {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.filter-container > .menu >.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s all;
+    z-index: 1;
+}
+
+.filter-container > .menu >.active {
+    z-index: 0;
+    position: absolute;
+    transition: 0.2s all;
+}
+
+.filter-container > .item-container {
+    position: relative;
+}
+
+.filter-container > .item-container >.movie-item {
+    overflow: hidden;
+    position: absolute;
+    transition: all 0.7s linear;
+    animation: animate 0.7s ease;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.filter-container > .item-container >.movie-item .image > img {
+    object-fit: cover;
+}
+
+/* sample css */
+
+.filter-container.sample {
+    margin-top: 100px;
+    margin-left: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.filter-container.sample > .menu{
+    border-radius: 20px;
+    width: calc(5 * 150px + 12px);
+    height: 52px;
+    padding-left: 5px;
+    margin-bottom: 30px;
+    border: 1px solid rgb(49, 214, 255);
+}
+
+.filter-container.sample > .menu >.item{
+    border-image-repeat: 6px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    width: 150px;
+    height: 40px;
+}
+
+.filter-container.sample > .menu >.active{
+    width: 150px;
+    height: 40px;
+    margin-top: 5px;
+    left: 5px;
+    top: 0;
+    background-color: rgb(49, 214, 255);
+    border-radius: 16px;
+}
+
+
+.filter-container.sample > .item-container {
+    margin-top: 20px;
+}
+
+.filter-container.sample > .item-container >.movie-item {
+    width: 180px;
+    height: 230px;
+}
+
+.filter-container.sample > .item-container >.movie-item p {
+    height: 20px;
+    font-size: 10px;
+}
+
+.filter-container.sample > .item-container >.movie-item .image > img {
+    height: 200px;
+    width: 100%;
+    border-radius: 6px;
+}
